@@ -18,7 +18,10 @@
 <script src="https://api.twitter.com/1.1/users/lookup.json"></script>
 
 
-<script type="text/javascript">
-
-
-</script>
+OAuth realm="<name of realm, e.g. Twitter API>",
+oauth_consumer_key="<your app key, you'll know this already from your twitter app>",
+oauth_nonce="<this is basically a random alphanumeric string which your app should generate>",
+oauth_timestamp="<number of seconds since 1/1/1970 00:00:00",
+oauth_signature_method="HMAC-SHA1",
+oauth_version="1.0",
+oauth_signature="<this is the trickiest part, you basically have to hash the request + two secret params through a signing algorithm using the signature method above>"
